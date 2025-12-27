@@ -1,0 +1,60 @@
+.myName{
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translateY(-45%);
+    font-size: 10vw;
+    /* viewport width의 줄임말로, 화면 가로 길이의 1% 니까 화면 크기에 따라 자동변화*/
+    color: white;
+    font-weight: 500;
+    white-space: nowrap;    
+    /* 줄바꿈 X */
+    text-align: center;
+    width: 100%;
+    transition: transform 0.1s linear;
+    pointer-events: none;
+}
+
+.explainGroup{
+    position: fixed;
+    left: 3%;
+    top: 66%;
+    font-size: 1.3vw;
+    font-weight: 300;
+    
+    width: 50%;
+    text-align:left;
+    transition: transform 0.1s linear;
+    pointer-events: none;
+}
+
+.detailWrapper{
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 10vw;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0.1;
+}
+
+.detailChar { 
+    display: inline-block;
+}
+
+.detailDesc {
+  position: fixed;
+
+  /* Detailed View 기준 왼쪽 아래 */
+   left: 5%;
+  top: 60%;
+  width:50%;
+  font-size: 1.9vw;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: left;
+
+  pointer-events: none;
+  will-change: transform, opacity;
+}
