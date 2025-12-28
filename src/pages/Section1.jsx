@@ -61,7 +61,7 @@ const Section1 = () => {
 
 
 
-    <Section3 />
+    <Section3 scrollY={scrollY} detailEndY={start + text.length*100 + 100 + 400 + 2000 }/>
 
 
     
