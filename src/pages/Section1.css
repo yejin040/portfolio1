@@ -5,7 +5,7 @@
     transform: translateY(-45%);
     font-size: 10vw;
     /* viewport width의 줄임말로, 화면 가로 길이의 1% 니까 화면 크기에 따라 자동변화*/
-    color: white;
+    color: var(--textColor);
     font-weight: 500;
     white-space: nowrap;    
     /* 줄바꿈 X */

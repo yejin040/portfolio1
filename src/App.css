@@ -1,5 +1,26 @@
-/* .App {
+ @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+ 
+
+ 
+ :root{
+    --org : #ff6714;
+    --textColor : #ffffff;
+    --bgColor : #080A10;
+ }
+
+ 
+ body{
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--org);
+
+ }
+
+ /*
+ .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -36,3 +57,4 @@
     transform: rotate(360deg);
   }
 } */
+

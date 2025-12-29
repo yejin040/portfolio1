@@ -1,8 +1,10 @@
-import React from 'react'
-
-const Section3 = ({ scrollY,detailEndY }) => {
+import React  from 'react';
 
 
+const Section3 = ({ scrollY, start, text }) => {
+
+ 
+  
 /*    
 [ Section 3 ]
 - 큰 문구 -> 스크롤하면 천천히 사라짐
@@ -18,6 +20,7 @@ const sentences = [
   '커스텀제품을 만들 수 있으면 좋겠어요',
   '차별화된 쇼핑 경험을 제공하고 싶어요'
 ];
+const detailEndY= start + text.length*100 + 100 + 400 + 2000 ;
 
 const centerY = window.innerHeight /2; //화면 중앙 기준으로 opacity 계산
 const fadeDistance = 200; //중앙에서 +- 200px 범위에서 0~1

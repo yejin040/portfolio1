@@ -1,6 +1,6 @@
 body{
-    background-color: black;
-    color: white;
+    background-color: var(--bgColor);
+    color: var(--textColor);
     height: 5000px;
     /* 스크롤길이랑 문서길이가 같으면 스크롤 자체가 안되니까 길이 따로줌 */
 }
@@ -38,7 +38,8 @@ body{
 }
 
 .logo{
-    color: orangered;
+    color: var(--org);
+    /* color: orangered; */
     font-size:xx-large ;
     margin-left: 5%;
     font-weight: 700;   
@@ -49,7 +50,7 @@ body{
 .menu , .Btn{
  /* padding-left: 5px; */
  margin-right: 30px;
- color: white;
+ color: var(--textColor);
 }
 
 button{
@@ -58,7 +59,7 @@ button{
     /* 기본 테두리 제거 */
     padding: 10px 20px;
     /* 이너 동서남북 */
-    background-color: orangered;
+    background-color: var(--org);
     cursor: pointer;
     /* 갖다대면 */
     font-size:small;
@@ -84,7 +85,7 @@ button{
     left: 50%;      /*시작 위치를 가운데로 -> 스타트 지점에서 중앙으로 스타트 옮김*/
     width: 0;   /* 처음엔 안보임 = 길이 0 */
     height: 1px;    /*선 두께*/
-    background: white;      /*선 색*/
+    background: var(--textColor);    /*선 색*/
     transform: translateX(-50%);    /*자기 너비의 절반만큼 왼쪽으로 이동 = 중앙*/
     /* transform : 요소 모양,위치 바꾸는 animation ->이동,회전,확.축소,기울이기 가능 */
                                 /* transform: translateX(20px);  오른쪽으로 이동 */
