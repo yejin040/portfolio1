@@ -46,12 +46,13 @@ const Header = () => {
         {/* <div> */}
             <div className='group'>
                 <a href='/logo'className='logo'>SOI.LAB 3D</a>
-                    <div className='menuTool'>  
-                        <a href='/menu' className='menu'>About</a>
-                        <a href='/menu' className='menu'>FAQ</a>
-                        <a href='/menu' className='menu'>도입문의</a>
-                        <button className='Btn'>추예진 ??</button>
-                    </div>
+                <div className='menuTool'>  
+                    {/* Link */}
+                    <a href='/menu' className='menu'>About</a>
+                    <a href='/menu' className='menu'>FAQ</a>
+                    <a href='/menu' className='menu'>도입문의</a>
+                    <button className='Btn'>추예진 ??</button>
+                </div>
             </div>
         {/* </div> */}
     </div>
