@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Section1 from './pages/Section1';
 import Section2 from './pages/Section2';
 import Section3 from './pages/Section3';
+import Section4 from './pages/Section4';
 import useScroll from './utils/useScroll';
 
 function App() {
@@ -89,6 +90,22 @@ const start = 800;              // 시작 스크롤 -> 800px부터 글자 나오
   const explain2Opacity = explain2Clamped * (1-explain2OutClamped);
  
 
+
+
+
+
+  //섹션4
+  const section3End = 6900;   //섹션 3 전체길이
+    //섹션4 전체길이
+  const section4Duration = 2000;
+  const section4Scroll = Math.max((scrollY - section3End),0) ;
+
+
+
+  // const section5Scroll = scrollY - (section3End + section4Duration);
+  
+  //해야하는것 ->  섹션 3 끝나는 시점을 정확히 계산하지 못해서 섹션 4 실행시점이 이상함
+  //그리고 나머지 5도 구현해야하고 데일윈드 css공부해서 전부 수정하기
   return (
     <>
     <Header />
@@ -111,6 +128,13 @@ const start = 800;              // 시작 스크롤 -> 800px부터 글자 나오
       start={start}
       />
 
+
+        {scrollY >= section3End && (
+  <Section4 sectionScroll={scrollY - section3End} />
+)}
+
+      
+    
      
     </div>
     </>

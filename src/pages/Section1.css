@@ -1,14 +1,14 @@
-.myName{
+/* .myName{
     position: fixed;
     left: 50%;
     top: 45%;
     transform: translateY(-45%);
     font-size: 10vw;
-    /* viewport width의 줄임말로, 화면 가로 길이의 1% 니까 화면 크기에 따라 자동변화*/
+ //  viewport width의 줄임말로, 화면 가로 길이의 1% 니까 화면 크기에 따라 자동변화
     color: var(--textColor);
     font-weight: 500;
     white-space: nowrap;    
-    /* 줄바꿈 X */
+     줄바꿈 X 
     text-align: center;
     width: 100%;
     transition: transform 0.1s linear;
@@ -48,7 +48,7 @@
 .detailDesc {
   position: fixed;
 
-  /* Detailed View 기준 왼쪽 아래 */
+  // Detailed View 기준 왼쪽 아래 
    left: 5%;
   top: 60%;
   width:50%;
@@ -59,4 +59,4 @@
 
   pointer-events: none;
   will-change: transform, opacity;
-}
+} */

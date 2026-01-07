@@ -1,5 +1,5 @@
 import React from 'react';
-import './Section1.css';
+// import './Section1.css';
 
 
 const Section1 = ({ scrollY }) => {
@@ -13,7 +13,20 @@ const Section1 = ({ scrollY }) => {
 return (
   <>
 
-    <div className="myName" style={{
+    <div className={`fixed
+    left-1/2 
+    top-[45%]
+    w-full
+    text-center 
+    whitespace-nowrap 
+    font-medium 
+    pointer-events-none
+    transition-transform 
+    duration-100 
+    ease-linear 
+    text-[10vw] 
+    text-[var(--textColor)]`}
+     style={{
       transform: scrollY <= 500      ?     'translate(-50%, -50%)'    //500보다 작으면 중앙유지
         : `translate( -50% , calc(-50% - ${(scrollY - 500)}px)  )`,
             // 마이너스 지금 스크롤 - 500 = 무ㅡㅓ 300 , 300px만큼 
@@ -21,7 +34,9 @@ return (
     }}>CHOO YE JIN</div> 
 
 
-    <div className='explainGroup' style={{
+    <div className={`fixed left-[3%] top-[66%] w-1/2 
+    text-left  font-light pointer-events-none
+    transition-transform duration-100 ease-linear text-[1.3vw]`} style={{
       transform: scrollY <= 500 ? 'translateY(-50%)'
         : `translateY(calc(-50% - ${(scrollY - 500)}px))`,
     }}>
