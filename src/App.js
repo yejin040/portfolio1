@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-    <Header />
+      <Header />
       <Section1 />
       <Section2 />
       <Section3 />

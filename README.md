@@ -1,3 +1,7 @@
+## 260121
+
+https://codle-alpha.vercel.app/kr
+
 ## 251229
 
 1. 웹폰트 / 메인칼라 설정
