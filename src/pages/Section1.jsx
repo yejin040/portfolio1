@@ -1,51 +1,42 @@
-import React from 'react';
-// import './Section1.css';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 
-const Section1 = ({ scrollY }) => {
-/*  [ Section 1 ]
-  - 큰 문구 -> 중앙 -> 500px정도에서 스크롤
-  - 설명 문구 -> 저 큰 문구 좌측 하단에 같이 있다가 같이 사라짐
-   
-*/
 
 
-return (
-  <>
+const Section1 = () => {
+  const ref = useRef(null);
 
-    <div className={`fixed
-    left-1/2 
-    top-[45%]
-    w-full
-    text-center 
-    whitespace-nowrap 
-    font-medium 
-    pointer-events-none
-    transition-transform 
-    duration-100 
-    ease-linear 
-    text-[10vw] 
-    text-[var(--textColor)]`}
-     style={{
-      transform: scrollY <= 500      ?     'translate(-50%, -50%)'    //500보다 작으면 중앙유지
-        : `translate( -50% , calc(-50% - ${(scrollY - 500)}px)  )`,
-            // 마이너스 지금 스크롤 - 500 = 무ㅡㅓ 300 , 300px만큼 
-            // calc() 서로 다른 단위(% + px)를 한 번에 계산하기 위해 씀
-    }}>CHOO YE JIN</div> 
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
 
+  // 0~0.3 동안 중앙 유지 → 위로 이동
+  const y = useTransform(scrollYProgress, [0, 0.3], ["-50%", "-150%"]);
+  const opacity = useTransform(scrollYProgress, [0.25, 0.35], [1, 0]);
 
-    <div className={`fixed left-[3%] top-[66%] w-1/2 
-    text-left  font-light pointer-events-none
-    transition-transform duration-100 ease-linear text-[1.3vw]`} style={{
-      transform: scrollY <= 500 ? 'translateY(-50%)'
-        : `translateY(calc(-50% - ${(scrollY - 500)}px))`,
-    }}>
-        소이정 3D LAB은 제품의  단순한 3D화를 넘어,<br />
-       디지털 쇼룸으로 확장 가능한<br />
-       차세대 3D 웹 기반 실시간 제품 경험을 연구합니다.</div>
+  return (
+    <section ref={ref} className="h-[200vh] relative bg-[var(--bgColor)]">
+      <motion.div
+        className="sticky top-[45%] left-1/2
+          w-full text-center text-[10vw] font-medium
+          whitespace-nowrap pointer-events-none text-[var(--textColor)]
+          -translate-x-1/2"
+        style={{ y, opacity }}>
+        CHOO YE JIN
+      </motion.div>
 
-    
-  </>
-)}
+      <motion.div
+        className="sticky top-[66%] left-[3%] w-1/2
+          text-[1.3vw] font-light pointer-events-none"
+        style={{ y, opacity }}>
+        소이정 3D LAB은 제품의 단순한 3D화를 넘어,<br />
+        디지털 쇼룸으로 확장 가능한<br />
+        차세대 3D 웹 기반 실시간 제품 경험을 연구합니다.
+      </motion.div>
+    </section>
+  );
+};
 
 export default Section1;
